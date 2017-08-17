@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One');
+@import url('https://fonts.googleapis.com/css?family=Cardo');
+
+@import "normalize";
+@import "reset";
+
+/* Clearfix prevents floating boxes floating out of container */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Basic Font settings */
+
+html {
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* And here follows your custom CSS */
+body {
+  background-image: url('../images/bg.png');
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------- */
+/* Basics and recrating some defaults that reset.css removed */
+/* --------------------------------------------------------- */
+
+a {
+  text-decoration: none;
+  color: #41b7d8;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* ----------------------------------- */
+/*     Page header and footer setup    */
+/* ----------------------------------- */
+
+#page-header,
+footer {
+  background-color: #FF673C;
+}
+
+#page-header {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+}
+
+footer {
+  padding: 20px 0;
+  box-shadow: 0 -2px 2px rgba(0, 0, 0, .3);
+}
+
+/* ----------------------------------- */
+/*    maximum width and centering      */
+/* ----------------------------------- */
+
+main,
+#page-header section,
+footer nav {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer nav {
+  margin: 20px auto;
+}
+
+header section {
+  padding-top: 40px;
+  position: relative;
+}
+
+/* ----------------------------------- */
+/*        page logo with hover         */
+/* ----------------------------------- */
+
+#page-logo {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  text-indent: -999em;
+  width: 95px;
+  height: 60px;
+  background-image: url('../images/sprite.svg');
+  margin-bottom: 10px;
+}
+
+#page-logo:hover {
+  background-position: 0 -60px;
+}
+
+/* ----------------------------------- */
+/* main navigation with hover dropdown */
+/* ----------------------------------- */
+
+#main-navigation a,
+footer a {
+  color: white;
+}
+
+#main-navigation a {
+  display: block;
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+
+#main-navigation > ul > li,
+#footer-navigation > ul > li {
+  float: left;
+}
+
+#main-navigation li {
+  position: relative;
+
+}
+
+#main-navigation li.expanded > a:after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-image: url('../images/sprite.svg');
+  background-position: -95px 0;
+  margin: 0 10px;
+}
+
+#main-navigation li.expanded:hover > a:after {
+  background-position: -105px 0;
+}
+
+#main-navigation li ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+}
+
+#main-navigation li:hover {
+  background-color: #fff;
+}
+
+#main-navigation li:hover a {
+  color: #FF673C;
+}
+
+#main-navigation li:hover ul {
+  display: block;
+}
+
+/* ------------------------------- */
+/* footer navigation without hover */
+/* ------------------------------- */
+
+footer nav > ul > li {
+  width: 20%;
+}
+
+footer li a {
+  display: block;
+  padding: 5px 0;
+}
+
+/* -------------------------- */
+/*       main container       */
+/* -------------------------- */
+
+main {
+  background-color: #fff;
+  margin: 40px auto;
+  width: 900px;
+  padding: 20px;
+}
+
+/* -------------------------- */
+/*       Author section       */
+/* -------------------------- */
+
+main section {
+  border: 5px solid lightgrey;
+  padding: 15px;
+}
+
+main section figure {
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 50%;
+  float: left;
+}
+
+main section figure img {
+  max-width: none;
+  width: auto;
+  height: 160px;
+}
+
+main section h1, section p {
+  margin-left: 180px;
+}
+
+/* -------------------------- */
+/*        Articles            */
+/* -------------------------- */
+
+main article {
+  margin: 40px 0;
+}
+
+main article figure {
+  text-align: center;
+  margin: 1.5em auto;
+}
+
+main article p:first-of-type {
+  font-family: Georgia, serif;
+}
+
+/* -------------------------- */
+/* Articles: featured article */
+/* -------------------------- */
+
+main article.featured {
+  position: relative;
+  border: 5px solid #DA4122;
+  padding: 15px;
+}
+
+main article.featured:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 60px;
+  height: 60px;
+  background-image: url('../images/sprite.svg');
+  background-position: -95px -20px;
+}
+
+/* --------------------- */
+/*       button links    */
+/* --------------------- */
+
+.button {
+  display: inline-block;
+  padding: .35em .65em;
+  border: .08em solid rgba(0,0,0,.1);
+  border-radius: .3125em;
+  color: #fff;
+}
+
+.button-more {
+  background: #41b7d8;
+}
+
+.button-more:after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  background-image: url('../images/sprite.svg');
+  background-position: -95px -10px;
+}
+
+
